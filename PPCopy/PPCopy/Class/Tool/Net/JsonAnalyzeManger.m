@@ -337,4 +337,10 @@ static JsonAnalyzeManger * jsonAnalyzeManger;
     }
 }
 
+
+#pragma mark- 退出登录
+/**退出登录*/
+- (void)customerSignOut{}
+
+
 @end
