@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="98" id="KGk-i7-Jjw" customClass="ReadHestoryCell">
+            <rect key="frame" x="0.0" y="0.0" width="451" height="98"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="451" height="98"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CH.png" translatesAutoresizingMaskIntoConstraints="NO" id="C02-mR-NOb">
+                        <rect key="frame" x="10" y="10" width="77.5" height="77.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="C02-mR-NOb" secondAttribute="height" multiplier="1:1" id="5Da-FN-Qtj"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="早安,全世界都在看131年来最高气温致美国加州山火蔓延" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HuU-0m-B1G">
+                        <rect key="frame" x="97.5" y="8" width="335.5" height="62.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="HuU-0m-B1G" secondAttribute="height" multiplier="150:28" id="YlE-wt-Cp0"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="快看 2天前阅读" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YJf-6i-sd4">
+                        <rect key="frame" x="97.5" y="69.5" width="335.5" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="wvD-4D-4Jo"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="HuU-0m-B1G" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="5gv-Gm-t87"/>
+                    <constraint firstItem="YJf-6i-sd4" firstAttribute="leading" secondItem="C02-mR-NOb" secondAttribute="trailing" constant="10" id="Jwe-tj-jbd"/>
+                    <constraint firstItem="C02-mR-NOb" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="Lbr-Zk-d9q"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="YJf-6i-sd4" secondAttribute="bottom" id="Mzg-nh-lPO"/>
+                    <constraint firstAttribute="bottom" secondItem="C02-mR-NOb" secondAttribute="bottom" constant="10" id="bY3-en-JzG"/>
+                    <constraint firstItem="HuU-0m-B1G" firstAttribute="leading" secondItem="C02-mR-NOb" secondAttribute="trailing" constant="10" id="jSU-7r-nT9"/>
+                    <constraint firstItem="C02-mR-NOb" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="kNH-Qj-9AP"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="YJf-6i-sd4" secondAttribute="trailing" constant="10" id="m0f-qN-JzT"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="HuU-0m-B1G" secondAttribute="trailing" constant="10" id="vpb-tx-I0q"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="bigTitle" destination="HuU-0m-B1G" id="HwB-xL-lxh"/>
+                <outlet property="image" destination="C02-mR-NOb" id="uDa-lL-yL7"/>
+                <outlet property="littleTitle" destination="YJf-6i-sd4" id="zkU-vT-KcH"/>
+            </connections>
+            <point key="canvasLocation" x="-29.5" y="93"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="CH.png" width="60" height="60"/>
+    </resources>
+</document>

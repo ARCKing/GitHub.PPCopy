@@ -1,0 +1,205 @@
+//
+//  PHeader.pch
+//  PPCopy
+//
+//  Created by gxtc on 2017/6/28.
+//  Copyright © 2017年 gxtc. All rights reserved.
+//
+
+#ifndef PHeader_pch
+#define PHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+/**thirdLib*/
+#import "AFNetworking.h"
+#import "NetWork.h"
+#import "MJRefresh.h"
+#import "UIImageView+WebCache.h"
+#import "JSONModel.h"
+#import "Masonry.h"
+#import "MBProgressHUD.h"
+#import "MD5Tool.h"
+
+
+/**Model*/
+#import "ArticleModel.h"
+#import "HomePageModel.h"
+#import "HomePage_adModel.h"
+#import "HomePage_flashModel.h"
+#import "MemberModel.h"
+#import "MissionModel.h"
+#import "Today_infoModel.h"
+#import "YesterDay_infoModel.h"
+#import "Invite_incomeModel.h"
+#import "ArticleClassifyModel.h"
+
+/**Realm*/
+#import "RealmManger.h"
+#import "UserInfoRealmModel.h"
+
+
+/**view*/
+#import "LeftView.h"
+#import "RootView.h"
+#import "MainNavigationView.h"
+#import "HomeMainView.h"
+#import "LeftNavView.h"
+#import "Left_LeftChannelButtonView.h"
+#import "LeftChannelCollectionView.h"
+#import "SliderLeftView.h"
+#import "SliderMainView.h"
+#import "MainCollectionView.h"
+#import "CustomScrollView.h"
+#import "MenuView.h"
+#import "SearchView.h"
+#import "UserCenterHeadView.h"
+#import "UserCenterTableView.h"
+#import "WKWeb_View.h"
+#import "WkWebNavBarView.h"
+#import "WKWebBottomView.h"
+#import "WKWebShareView.h"
+#import "WKWebCommentView.h"
+#import "HomeHeadPageView.h"
+#import "HomeHeadScrollPage.h"
+
+/**Controller*/
+#import "RootView.h"
+#import "SliderController.h"
+#import "MainController.h"
+#import "LeftController.h"
+#import "LoginController.h"
+#import "RootAddPanGuesterController.h"
+#import "RegisterAndForgetController.h"
+#import "SearchController.h"
+#import "BaoLiaoController.h"
+#import "UserCenterController.h"
+#import "ChangePasswordController.h"
+#import "NickNameController.h"
+#import "AddressController.h"
+#import "ReadHestoryController.h"
+#import "WKWebController.h"
+#import "MoreController.h"
+#import "SystemMessageController.h"
+#import "ColletcController.h"
+#import "UserRespondsController.h"
+#import "AboutUsController.h"
+#import "JoinUsController.h"
+
+/**Cell*/
+#import "ChannelCollectionViewCell.h"
+#import "MainCollectionViewCell.h"
+#import "MenuCollectionViewCell.h"
+#import "MenuSectionSecondCollectionViewCell.h"
+#import "RootCollectionCell.h"
+#import "UserCenterLocationCell.h"
+#import "ReadHestoryCell.h"
+#import "MoreCell.h"
+#import "SystemMessageCell.h"
+#import "CollectCell.h"
+
+/**OBject*/
+#import "TCN_PageControl.h"
+#import "TCN_imagePageControl.h"
+#import "TCN_NavigationBarView.h"
+#import "DownLoadUrlImage.h"
+#import "JsonAnalyzeManger.h"
+
+/**Catergory*/
+#import "UIViewController+SliderController.h"
+#import "UIButton+QuickCreatButtion.h"
+#import "UILabel+QuickAttributedText.h"
+
+/**屏幕宽度*/
+#define Screen_with [UIScreen mainScreen].bounds.size.width
+/**屏幕高度*/
+#define Screen_heigh [UIScreen mainScreen].bounds.size.height
+
+/**屏幕尺寸*/
+#define Screen_inch Screen_with == 320.0 ? 4.0:(Screen_with == 375.0 ? 4.7:5.5)
+
+/**系统版本号*/
+#define iOS_Vision [[UIDevice currentDevice].systemVersion floatValue]
+
+/**RGB颜色*/
+#define RGB_color(R,G,B,A) [UIColor colorWithRed:R/255.0 green:G/255.0 blue:B/255.0 alpha:A]
+
+/**随机颜色*/
+#define arc4_Color RGB_color(arc4random()%255 * 1.0, arc4random()%255 * 1.0, arc4random()%255 * 1.0, 1.0)
+
+/**滑动范围*/
+#define SliderWith Screen_with/8
+
+
+//颜色/
+
+/**透明色*/
+#define  clear_Color  [UIColor clearColor]
+
+/**黑色*/
+#define  black_Color  [UIColor blackColor]
+
+/**白色*/
+#define  white_Color  [UIColor whiteColor]
+
+/**橙色*/
+#define  orange_Color  [UIColor orangeColor]
+
+/**红色*/
+#define  red_Color  [UIColor redColor]
+
+/**橙红色*/
+#define  orangered_Color [UIColor colorWithRed:255.0/255.0 green:69.0/255.0 blue:0.0/255.0 alpha:1.0]
+
+/**番茄色*/
+#define  tomato_Color [UIColor colorWithRed:255.0/255.0 green:99.0/255.0 blue:71.0/255.0 alpha:1.0]
+
+/**浅灰色*/
+#define  lightgrey_Color [UIColor colorWithRed:211.0/255.0 green:211.0/255.0 blue:211.0/255.0 alpha:1.0]
+
+/**银白色*/
+#define  silver_Color [UIColor colorWithRed:192.0/255.0 green:192.0/255.0 blue:192.0/255.0 alpha:1.0]
+
+/**深灰色*/
+#define  darkgray_Color [UIColor colorWithRed:169.0/255.0 green:169.0/255.0 blue:169.0/255.0 alpha:1.0]
+
+/**暗灰色*/
+#define  dimgray_Color [UIColor colorWithRed:105.0/255.0 green:105.0/255.0 blue:105.0/255.0 alpha:1.0]
+
+/**亮灰色*/
+#define  gainsboro_Color [UIColor colorWithRed:220.0/255.0 green:220.0/255.0 blue:220.0/255.0 alpha:1.0]
+
+/**烟白色*/
+#define  whitesmoke_Color [UIColor colorWithRed:245.0/255.0 green:245.0/255.0 blue:245.0/255.0 alpha:1.0]
+
+/**粉红色*/
+#define  pink_Color [UIColor colorWithRed:255.0/255.0 green:192.0/255.0 blue:203.0/255.0 alpha:1.0]
+
+/**热情的粉红色*/
+#define  hotpink_Color [UIColor colorWithRed:255.0/255.0 green:105.0/255.0 blue:180.0/255.0 alpha:1.0]
+
+/**紫红色*/
+#define  fuchsia_Color [UIColor colorWithRed:255.0/255.0 green:0.0/255.0 blue:255.0/255.0 alpha:1.0]
+
+/**深天蓝*/
+#define  deepskyblue_Color [UIColor colorWithRed:0.0/255.0 green:191.0/255.0 blue:255.0/255.0 alpha:1.0]
+
+/**宝石绿*/
+#define  turquoise_Color [UIColor colorWithRed:64.0/255.0 green:224.0/255.0 blue:208.0/255.0 alpha:1.0]
+
+
+/** Helvetica-Bold 字体加粗*/
+#define Helvetica_Bold @"Helvetica-Bold"
+
+
+typedef NS_ENUM(NSInteger,NetRequestType) {
+
+    NetRequestTypeIsGet = 0,
+    NetRequestTypeIsPost = 1
+};
+
+
+
+#import "HeaderURL.h"
+#endif /* PHeader_pch */
