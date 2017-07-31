@@ -11,7 +11,7 @@
 #import "HomeHeadPageView.h"
 
 typedef void(^MainCollectionView_DidSelectItem_ArticleModel_Block)(ArticleModel *);
-typedef void(^MainCollectionView_DidSelectItem_Menu_Block)(NSInteger);
+typedef void(^MainCollectionView_DidSelectItem_Menu_Block)(NSInteger,NSInteger);
 
 @interface MainCollectionView : RootView
 

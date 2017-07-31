@@ -297,8 +297,12 @@ static JsonAnalyzeManger * jsonAnalyzeManger;
             NSString * uid = data[@"uid"];
             NSString * token = data[@"token"];
             
-            [weakSelf saveTokenAndUid:uid andToken:token];
+            [weakSelf saveTokenAndUid:uid andToken:token andIsLogin:YES];
             
+        }else{
+            
+            [weakSelf saveTokenAndUid:nil andToken:nil andIsLogin:NO];
+
         }
         
         [weakSelf jsonDataCompleteWithCode:code Message:message OtherString:nil data1:nil data2:nil dict:nil complete:complete];
@@ -309,17 +313,25 @@ static JsonAnalyzeManger * jsonAnalyzeManger;
 
 
 
-#pragma mark- 写入token - uid -login
-
-- (void)saveTokenAndUid:(NSString *)uid andToken:(NSString *)token{
+#pragma mark- 写入token - uid -login-改变登录状态
+/**写入token - uid -login -改变登录状态*/
+- (void)saveTokenAndUid:(NSString *)uid andToken:(NSString *)token andIsLogin:(BOOL)islogin{
 
     NSDictionary * userInfo = [self.userDefault objectForKey:key_userInfo];
     
     NSMutableDictionary * tempDic = [NSMutableDictionary dictionaryWithDictionary:userInfo];
     
-    tempDic[key_token] = token;
-    tempDic[key_uid] = uid;
-    tempDic[key_login] = @"1";
+    
+    if (islogin) {
+        tempDic[key_token] = token;
+        tempDic[key_uid] = uid;
+        tempDic[key_login] = @"1";
+
+    }else{
+    
+        tempDic[key_login] = @"0";
+
+    }
     
     userInfo = [NSDictionary dictionaryWithDictionary:tempDic];
     
@@ -336,5 +348,28 @@ static JsonAnalyzeManger * jsonAnalyzeManger;
         NSLog(@"保存失败");
     }
 }
+
+
+#pragma mark- 退出登录
+/**退出登录*/
+- (void)customerSignOut{
+
+    NSDictionary * params = [NSDictionary dictionaryWithObjectsAndKeys:self.uid,@"uid",self.token,@"token",nil];
+    
+    WEAK_SELF;
+    self.net.responseSerializerType = NetResponseSerializerTypeJSON;//默认JSON
+    [self.net NetSendRequestWithRequesType:NetRequestTypeIsPost andUrl:Log_Out_URL andParams:params andCompletion:^(id responseObject) {
+        
+        NSString * code = [NSString stringWithFormat:@"%@",responseObject[@"code"]];
+        
+        if ([code isEqualToString:@"1"]) {
+            
+            [weakSelf saveTokenAndUid:nil andToken:nil andIsLogin:NO];
+        }
+        
+    }];
+
+}
+
 
 @end
