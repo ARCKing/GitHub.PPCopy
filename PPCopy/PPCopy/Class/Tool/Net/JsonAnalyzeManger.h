@@ -32,6 +32,11 @@ typedef void(^JsonAnaylzeMangerBlock)(NSString * ,NSString *, NSString *,NSArray
 /**用户登录*/
 - (void)customLoginActionWithPhoneNumber:(NSString *)phone andPassword:(NSString *)password complete:(JsonAnaylzeMangerBlock)complete;
 
+
+#pragma mark- 写入token - uid -login-改变登录状态
+/**写入token - uid -login -改变登录状态*/
+- (void)saveTokenAndUid:(NSString *)uid andToken:(NSString *)token andIsLogin:(BOOL)islogin;
+
 #pragma mark- 退出登录
 /**退出登录*/
 - (void)customerSignOut;

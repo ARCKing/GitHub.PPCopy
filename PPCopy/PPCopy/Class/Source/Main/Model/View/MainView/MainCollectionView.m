@@ -201,7 +201,7 @@
         
         if(indexPath.section == 0){
         
-            self.DidSelectItem_Menu_BK(indexPath.row);
+            self.DidSelectItem_Menu_BK(indexPath.row,indexPath.section);
         
         }
         
@@ -209,14 +209,14 @@
         
         if (indexPath.section == 1 && indexPath.row == 7) {
             
-            self.DidSelectItem_Menu_BK(indexPath.row);
+            self.DidSelectItem_Menu_BK(indexPath.row,indexPath.section);
             
         }else if (indexPath.section == 1 && indexPath.row == 3) {
             
-            self.DidSelectItem_Menu_BK(indexPath.row);
+            self.DidSelectItem_Menu_BK(indexPath.row,indexPath.section);
         }else if (indexPath.section == 1 && indexPath.row == 1) {
             
-            self.DidSelectItem_Menu_BK(indexPath.row);
+            self.DidSelectItem_Menu_BK(indexPath.row,indexPath.section);
         }
 
         

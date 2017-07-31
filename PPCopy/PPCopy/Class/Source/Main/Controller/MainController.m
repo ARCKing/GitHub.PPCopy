@@ -151,27 +151,38 @@
         [weakSelf.navigationController pushViewController:vc animated:YES];
     };
 
+   
     
-    self.homeMainView.menuView.collecctionView.DidSelectItem_Menu_BK = ^(NSInteger row){
+    self.homeMainView.menuView.collecctionView.DidSelectItem_Menu_BK = ^(NSInteger tag_row,NSInteger section) {
         
-
-        if (row == 7) {
-            MoreController * vc = [[MoreController alloc]init];
-            [weakSelf.navigationController pushViewController:vc animated:YES];
-
-        }else if (row == 3){
-            
-            SystemMessageController * vc =[[SystemMessageController alloc]init];
-            [weakSelf.navigationController pushViewController:vc animated:YES];
         
-        }else if (row == 1){
+        if (section == 1) {
             
-            ColletcController * vc =[[ColletcController alloc]init];
-            [weakSelf.navigationController pushViewController:vc animated:YES];
+            if (tag_row == 7) {
+                MoreController * vc = [[MoreController alloc]init];
+                [weakSelf.navigationController pushViewController:vc animated:YES];
             
+            }else if (tag_row == 3){
+            
+                SystemMessageController * vc =[[SystemMessageController alloc]init];
+                [weakSelf.navigationController pushViewController:vc animated:YES];
+            
+            }else if (tag_row == 1){
+            
+                ColletcController * vc =[[ColletcController alloc]init];
+                [weakSelf.navigationController pushViewController:vc animated:YES];
+            
+            }
+            
+        }else{
+        
+            [weakSelf.homeMainView.scrollView setContentOffset:CGPointMake(Screen_with * tag_row, 0) animated:YES];
+
         }
 
     };
+
+    
     
     self.homeMainView.addMJRefreshBK = ^(MainCollectionView * collectionView) {
       
@@ -217,11 +228,6 @@
     
     
     
-    self.homeMainView.menuView.collecctionView.DidSelectItem_Menu_BK = ^(NSInteger tag) {
-        
-        [weakSelf.homeMainView.scrollView setContentOffset:CGPointMake(Screen_with * tag, 0) animated:YES];
-        
-    };
     
     
 }
