@@ -352,7 +352,7 @@ static JsonAnalyzeManger * jsonAnalyzeManger;
 
 #pragma mark- 退出登录
 /**退出登录*/
-- (void)customerSignOut{
+- (void)customerSignOutAndComplete:(JsonAnaylzeMangerBlock)complete{
 
     NSDictionary * params = [NSDictionary dictionaryWithObjectsAndKeys:self.uid,@"uid",self.token,@"token",nil];
     
@@ -361,11 +361,16 @@ static JsonAnalyzeManger * jsonAnalyzeManger;
     [self.net NetSendRequestWithRequesType:NetRequestTypeIsPost andUrl:Log_Out_URL andParams:params andCompletion:^(id responseObject) {
         
         NSString * code = [NSString stringWithFormat:@"%@",responseObject[@"code"]];
-        
+        NSString * message = [NSString stringWithFormat:@"%@",responseObject[@"message"]];
+
         if ([code isEqualToString:@"1"]) {
             
             [weakSelf saveTokenAndUid:nil andToken:nil andIsLogin:NO];
         }
+        
+        
+        [weakSelf jsonDataCompleteWithCode:code Message:message OtherString:nil data1:nil data2:nil dict:nil complete:complete];
+
         
     }];
 

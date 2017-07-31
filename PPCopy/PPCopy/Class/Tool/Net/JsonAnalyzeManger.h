@@ -39,6 +39,6 @@ typedef void(^JsonAnaylzeMangerBlock)(NSString * ,NSString *, NSString *,NSArray
 
 #pragma mark- 退出登录
 /**退出登录*/
-- (void)customerSignOut;
+- (void)customerSignOutAndComplete:(JsonAnaylzeMangerBlock)complete;
 
 @end

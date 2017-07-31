@@ -10,6 +10,8 @@
 
 @interface UserCenterController ()
 @property(nonatomic,strong)UserCenterTableView * userCentView;
+
+
 @end
 
 @implementation UserCenterController
@@ -102,6 +104,25 @@
             [weakSelf.navigationController pushViewController:vc animated:YES];
             
         }
+    };
+    
+    
+    _userCentView.signOutBK = ^{
+      
+        [weakSelf.jsonAnalyzeManger customerSignOutAndComplete:^(NSString *code, NSString *message, NSString *otherStr, NSArray *arr1, NSArray *arr2, NSDictionary *dict) {
+            
+            if ([code isEqualToString:@"1"]) {
+                
+                [weakSelf.navigationController popViewControllerAnimated:YES];
+                
+            }else{
+            
+                NSLog(@"退出登失败:%@",message);
+            
+            }
+            
+        }];
+        
     };
     
     return _userCentView;

@@ -10,12 +10,13 @@
 
 
 typedef void(^TableViewDidSelectWithIndexPathBlock)(NSInteger);
-
+typedef void(^TableViewSignOutAbuttonBlock)(void);
 
 @interface UserCenterTableView : RootView
 
 @property(nonatomic,strong)UserCenterHeadView * headView;
+@property(nonatomic,strong)UIButton * signOutBt;
 
 @property(nonatomic,copy)TableViewDidSelectWithIndexPathBlock tableViewDidSelectWithIndexPathBK;
-
+@property(nonatomic,copy)TableViewSignOutAbuttonBlock signOutBK;
 @end

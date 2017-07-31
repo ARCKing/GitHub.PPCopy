@@ -141,11 +141,21 @@
         
         [_footView addSubview:line];
         
-        UIButton * signOut = [UIButton quickButtonWithFram:CGRectMake(10, Screen_with/12 - Screen_with/18, Screen_with - 20, Screen_with/9) andTitle:@"退出登录" andFont:16.0 andTitleColor:white_Color andBackGroundColor:deepskyblue_Color andCornCornerRadius:2.0 andImageName:nil];
-        [signOut addTarget:self action:@selector(signOutButtonAction) forControlEvents:UIControlEventTouchUpInside];
-        [_footView addSubview:signOut];
+        [_footView addSubview:self.signOutBt];
     }
     return _footView;
+}
+
+
+- (UIButton *)signOutBt{
+
+    if (!_signOutBt) {
+        
+        _signOutBt = [UIButton quickButtonWithFram:CGRectMake(10, Screen_with/12 - Screen_with/18, Screen_with - 20, Screen_with/9) andTitle:@"退出登录" andFont:16.0 andTitleColor:white_Color andBackGroundColor:deepskyblue_Color andCornCornerRadius:2.0 andImageName:nil];
+        [_signOutBt addTarget:self action:@selector(signOutButtonAction) forControlEvents:UIControlEventTouchUpInside];
+
+    }
+    return _signOutBt;
 }
 
 
@@ -166,6 +176,8 @@
 - (void)signOutButtonAction{
 
     NSLog(@"signOutButtonAction");
+    
+    self.signOutBK();
 }
 
 
