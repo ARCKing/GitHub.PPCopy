@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		22D917EB1F36C021006FB2F4 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22D917EA1F36C021006FB2F4 /* Realm.framework */; };
 		A92BC7B81F1078CD00000FAD /* SearchController.m in Sources */ = {isa = PBXBuildFile; fileRef = A92BC7B71F1078CD00000FAD /* SearchController.m */; };
 		A92BC7BB1F1079FC00000FAD /* TCN_NavigationBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = A92BC7BA1F1079FC00000FAD /* TCN_NavigationBarView.m */; };
 		A92BC7BE1F10815500000FAD /* SearchView.m in Sources */ = {isa = PBXBuildFile; fileRef = A92BC7BD1F10815500000FAD /* SearchView.m */; };
@@ -124,7 +125,6 @@
 		A9AB95F11F1370BB00B46C90 /* icon_xxk@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = A9AB95EF1F1370BB00B46C90 /* icon_xxk@3x.png */; };
 		A9AB95F41F13714800B46C90 /* icon_xf@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A9AB95F21F13714800B46C90 /* icon_xf@2x.png */; };
 		A9AB95F51F13714800B46C90 /* icon_xf@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = A9AB95F31F13714800B46C90 /* icon_xf@3x.png */; };
-		A9AF95FA1F2EB70A0066FB03 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9AF95F91F2EB70A0066FB03 /* Realm.framework */; };
 		A9B48E2B1F18675400C6DE1A /* WKWebController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9B48E2A1F18675400C6DE1A /* WKWebController.m */; };
 		A9B48E311F18682A00C6DE1A /* WKWeb_View.m in Sources */ = {isa = PBXBuildFile; fileRef = A9B48E301F18682A00C6DE1A /* WKWeb_View.m */; };
 		A9B48E341F18A2A600C6DE1A /* WkWebNavBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = A9B48E331F18A2A600C6DE1A /* WkWebNavBarView.m */; };
@@ -306,6 +306,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		22D917EA1F36C021006FB2F4 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
 		A92BC7B61F1078CD00000FAD /* SearchController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchController.h; sourceTree = "<group>"; };
 		A92BC7B71F1078CD00000FAD /* SearchController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchController.m; sourceTree = "<group>"; };
 		A92BC7B91F1079FC00000FAD /* TCN_NavigationBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCN_NavigationBarView.h; sourceTree = "<group>"; };
@@ -478,7 +479,6 @@
 		A9AB95EF1F1370BB00B46C90 /* icon_xxk@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_xxk@3x.png"; sourceTree = "<group>"; };
 		A9AB95F21F13714800B46C90 /* icon_xf@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_xf@2x.png"; sourceTree = "<group>"; };
 		A9AB95F31F13714800B46C90 /* icon_xf@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_xf@3x.png"; sourceTree = "<group>"; };
-		A9AF95F91F2EB70A0066FB03 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
 		A9B48E291F18675400C6DE1A /* WKWebController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKWebController.h; sourceTree = "<group>"; };
 		A9B48E2A1F18675400C6DE1A /* WKWebController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKWebController.m; sourceTree = "<group>"; };
 		A9B48E2F1F18682A00C6DE1A /* WKWeb_View.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKWeb_View.h; sourceTree = "<group>"; };
@@ -784,7 +784,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A9AF95FA1F2EB70A0066FB03 /* Realm.framework in Frameworks */,
+				22D917EB1F36C021006FB2F4 /* Realm.framework in Frameworks */,
 				A9700EF71F2AE00300186BE0 /* libc++.tbd in Frameworks */,
 				A9B9E6AD1F20847600D19A7B /* libz.tbd in Frameworks */,
 				A9B9E6AB1F20841F00D19A7B /* CoreTelephony.framework in Frameworks */,
@@ -1650,7 +1650,7 @@
 		A9B7AC431F03809800D2FFB5 /* ThirdSDK */ = {
 			isa = PBXGroup;
 			children = (
-				A9AF95F91F2EB70A0066FB03 /* Realm.framework */,
+				22D917EA1F36C021006FB2F4 /* Realm.framework */,
 				A9B9E68B1F205ADB00D19A7B /* UMSocial */,
 				A9A536501F19C6C400A693E9 /* UMMobClick.framework */,
 				A9A5364C1F19C66000A693E9 /* UMessage_Sdk_1.5.0a */,
@@ -2195,7 +2195,7 @@
 				TargetAttributes = {
 					A9B7AB5F1F03633B00D2FFB5 = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = 83K7JYL422;
+						DevelopmentTeam = 7JTKWL4XKW;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -2634,7 +2634,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 83K7JYL422;
+				DEVELOPMENT_TEAM = 7JTKWL4XKW;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/PPCopy/Class/ThirdSDK/UMSocial/UMSocialSDK",
@@ -2654,7 +2654,7 @@
 					"$(PROJECT_DIR)/PPCopy/Class/ThirdSDK/UMessage_Sdk_1.5.0a",
 				);
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = xqp.PPCopy;
+				PRODUCT_BUNDLE_IDENTIFIER = com.PPCopy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -2663,7 +2663,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 83K7JYL422;
+				DEVELOPMENT_TEAM = 7JTKWL4XKW;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/PPCopy/Class/ThirdSDK/UMSocial/UMSocialSDK",
@@ -2683,7 +2683,7 @@
 					"$(PROJECT_DIR)/PPCopy/Class/ThirdSDK/UMessage_Sdk_1.5.0a",
 				);
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = xqp.PPCopy;
+				PRODUCT_BUNDLE_IDENTIFIER = com.PPCopy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
